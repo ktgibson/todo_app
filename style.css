@@ -3,6 +3,7 @@
 html {
     font-size: 100%;
     box-sizing: border-box;
+    height: 100%;
 }
   
 body {
@@ -10,13 +11,12 @@ body {
     padding: 0;
     min-height: 100vh;
     background-color: #f2dcbb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Source Code Pro', monospace;
     font-size: 1.2em;
+    height:100%;
 }
-  
+
+
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -32,7 +32,19 @@ input:focus{
 #container{
     display: flex;
     flex-flow: column nowrap;
-    padding: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+}
+
+#main_container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    flex: 1;
 }
 
 h2{
@@ -44,7 +56,11 @@ h2{
 
 #list_container{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
+    height: 400px;
+    width: 100%;
+    overflow: auto;
+    margin-top: 30px;
 }
 
 #list_container ul{
@@ -137,4 +153,18 @@ h2{
 .list_item:hover{
     cursor: pointer;
     transform: scale(1.2);
+}
+
+
+.footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:10px 0;
+    text-align: center;
+    color: white;
+	background:linear-gradient(to bottom, #7c8d9e 5%, #5A6F86 100%);
+}
+
+@media all and (max-width: 600px) {
 }
