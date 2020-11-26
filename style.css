@@ -21,6 +21,18 @@ body {
     box-sizing: inherit;
 }
 
+::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5); 
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
 input:focus{
     outline: none;
     background:linear-gradient(to bottom, #5A6F86 5%, #7c8d9e 100%);
@@ -166,7 +178,8 @@ h2{
 	background:linear-gradient(to bottom, #7c8d9e 5%, #5A6F86 100%);
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 430px) {
+
     #main_container{
         width: auto;
     }
